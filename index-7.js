@@ -23,7 +23,12 @@ if (message.content.includes(prefix + "destroy")) {
  
   
  	
-
+client.on('message' ,function(message){
+	if(message.content.includes(prefix+ 'paysafecard' )){
+		message.delete()
+		message.channel.send('Commande non accesible en ce moment !')
+		}
+})
  
  
 
