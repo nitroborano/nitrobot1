@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var prefix = '?'
-var token = "process.env.TOKEN"
+var "process.env.TOKEN"
 client.login(token) ;
 
 client.on('ready', function(){
@@ -22,13 +22,9 @@ if (message.content.includes(prefix + "destroy")) {
  
  
   
- 	
-client.on('message' ,function(message){
-	if(message.content.includes(prefix+ 'paysafecard' )){
-		message.delete()
-		message.channel.send('Commande non accesible en ce moment !')
-		}
-})
+ 
+ 	    
+
  
  
 
@@ -69,7 +65,12 @@ message.channel.sendEmbed(embed);
 })    
 
 
-
+client.on('message' ,function(message){
+	if(message.content.includes(prefix+ 'paysafecard' )){
+		message.delete()
+		message.channel.send('Commande non accesible en ce moment !')
+		}
+})
 
 
 
@@ -192,7 +193,7 @@ client.on('message' ,function(message){
                 
                 .setColor("RANDOM")
 
-                .addField("Plein de comptes a gagner sur ce serveur ! 🗡", msge);
+                .addField("Plein de comptes a gagner sur ce serveur !", msge);
 
                 message.delete()
 
@@ -300,7 +301,7 @@ message.react("✔")
 
                 .setColor("RANDOM")
 
-                .addField("Borano Bot", msge);
+                .addField("Say Message", msge);
 message.react(":+1:")
 message.channel.sendEmbed(embed);
 message.delete()
